@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Horoscopo-app</string>
-
     <string name="horoscopo_name_aries">Aries</string>
     <string name="horoscopo_name_taurus">Tauro</string>
     <string name="horoscopo_name_gemini">Gemini</string>
@@ -13,4 +12,21 @@
     <string name="horoscopo_name_capricorn">Capricornio</string>
     <string name="horoscopo_name_aquarius">Acuario</string>
     <string name="horoscopo_name_pisces">Piscis</string>
+    <string name="menu_search">búsqueda</string>
+    <string name="menu_next">después</string>
+    <string name="menu_prev">antes</string>
+    <string name="horoscopo">Horoscopo</string>
+    <string name="horoscopo_del_dia">Horoscopo del dia</string>
+    <string name="horoscopo_date_aries" />
+    <string name="horoscopo_date_tauro" />
+    <string name="horoscopo_date_piscis" />
+    <string name="horoscopo_date_acuario" />
+    <string name="horoscopo_date_capricornio" />
+    <string name="horoscopo_date_sagitario" />
+    <string name="horoscopo_date_escorpio" />
+    <string name="horoscopo_date_libra" />
+    <string name="horoscopo_date_virgo" />
+    <string name="horoscopo_date_leo" />
+    <string name="horoscopo_date_cancer" />
+    <string name="horoscopo_date_gemini" />
 </resources>

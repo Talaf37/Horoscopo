@@ -31,6 +31,13 @@ class HoroscopoProvider {
     fun getHoroscopo(id: String): Horoscopo {
         return getHoroscopos().filter { it.id == id }.firstOrNull()!!
     }
+    fun getHoroscopo(index: Int): Horoscopo {
+        return getHoroscopos()[index]
+    }
+
+    fun getHoroscopoIndex(horoscope: Horoscopo): Int {
+        return getHoroscopos().indexOf(horoscope)
+    }
 
     suspend fun getHoroscopoLuck(horoscopoId: String): String? {
         val url = URL("https://horoscope-app-api.vercel.app/api/v1/get-horoscope/daily?sign=$horoscopoId&day=TODAY") // URL de la API o endpoint
@@ -38,12 +45,12 @@ class HoroscopoProvider {
         var result: String? = null
 
         try {
-            // Crear la conexión HTTP
+            // Creo la conexion HTTP
             connection = url.openConnection() as HttpsURLConnection
             connection.requestMethod = "GET" // Establecer el método GET
             connection.setRequestProperty("Accept", "application/json") // Establecer el tipo de contenido
 
-            // Leer la respuesta de la solicitud
+            // Leo la respuesta de la solicitud
             val responseCode = connection.responseCode
             if (responseCode == HttpURLConnection.HTTP_OK) {
                 val response = readStream (connection.inputStream)
@@ -58,7 +65,7 @@ class HoroscopoProvider {
         } catch (e: Exception) {
             Log.e("HTTP", "Error en la solicitud. ", e)
         } finally {
-            // Cerrar la conexión
+            // Cierro la conexión
             connection?.disconnect()
         }
         return result
